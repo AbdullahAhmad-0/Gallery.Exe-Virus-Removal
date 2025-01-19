@@ -56,6 +56,27 @@ The script will process the files, restore any hidden `.exe` files, and log the 
 - The script does not attempt to delete files that are already missing but logs such events in the CSV.
 - If any issues arise during execution (such as missing permissions or corrupted files), the script will log the errors for further investigation.
 
+## Background
+
+A while ago, I noticed strange behavior on my PC. My files, especially executable files (`.exe`), were behaving abnormally. After further investigation, I discovered that the `Gallery.exe` virus had infected my system. The virus was renaming my `.exe` files and replacing them with smaller, g-prefixed versions (e.g., `gexample.exe`). These g-prefixed files were fake versions that were created by the virus to replace the original files, and it was also hiding my actual executable files.
+
+The virus also seemed to add `.ico` files (e.g., `gexample.ico`), which I later realized were part of its operations. The whole situation was frustrating and confusing, as I couldn't easily recover my original files, and I couldn't run many of my programs because they had been replaced by these `g-` prefixed files.
+
+After several attempts to manually fix this issue, I realized that I needed an automated solution to restore my system and get rid of the virus's impact on my files. So after installing new window, I created a Python script that would:
+
+1. Search for all `.exe` files affected by the virus (i.e., smaller-sized files with `g-` prefix).
+2. Restore the original file by renaming the g-prefixed files.
+3. Remove any associated `.ico` files related to the virus.
+
+This script worked effectively in cleaning my system and allowed me to restore my files, but I soon realized that others could be facing the same issue. I decided to make this tool publicly available to help others who might be dealing with the same problem. By sharing this script, I hope to help people remove the `Gallery.exe` virus and recover their systems without having to deal with the confusion and time-consuming manual process.
+
+This tool is now open-source and available for anyone to use and modify. It scans a directory, processes the files, restores the original `.exe` files, and removes the malicious `g-` prefixed files and related `.ico` files, all while logging the process in a CSV for transparency.
+
+If you've encountered similar issues or suspect that your system has been infected, this script can help you clean up the virus and restore your files quickly.
+
+Stay safe, and always make sure to back up your important files regularly.
+
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
