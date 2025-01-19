@@ -29,24 +29,24 @@ This tool scans the specified directory, identifies the infected `.exe` files, r
 
 1. Clone the repository to your local machine.
 
-   git clone https://github.com/yourusername/gallery-exe-virus-removal.git
-   cd gallery-exe-virus-removal
+   - `git clone https://github.com/yourusername/gallery-exe-virus-removal.git`
+   - `cd gallery-exe-virus-removal`
 
 2. Ensure you have Python installed (Python 3.x is recommended). You can download Python from [here](https://www.python.org/downloads/).
 
 3. Install any necessary dependencies (if applicable).
 
-   pip install -r requirements.txt
+   - `pip install -r requirements.txt`
 
 4. You can now run the script with the following command:
 
-   python gallery_exe_removal.py
+   `python Gallery.exe File Remover.py`
 
 ## Usage
 
 To use the tool, provide the path of the directory you want to scan when prompted:
 
-Enter the directory path to scan:
+Enter the directory path to scan: (you can use disk path for ex `d:\\`)
 
 The script will process the files, restore any hidden `.exe` files, and log the actions to a CSV file (`file_changes_log.csv`).
 
