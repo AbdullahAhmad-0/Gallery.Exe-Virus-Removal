@@ -44,11 +44,12 @@ This tool scans the specified directory, identifies the infected `.exe` files, r
 
 ## Usage
 
-To use the tool, provide the path of the directory you want to scan when prompted:
+1. To use the tool, provide the path of the directory you want to scan when prompted:
+  - Enter the directory path to scan: (you can use disk path for ex `d:\\`)
+  - The script will process the files, restore any hidden `.exe` files, and log the actions to a CSV file (`file_changes_log.csv`).
 
-Enter the directory path to scan: (you can use disk path for ex `d:\\`)
-
-The script will process the files, restore any hidden `.exe` files, and log the actions to a CSV file (`file_changes_log.csv`).
+2. After generating file_changes_log.csv, run the unhide script
+  - python unhide_processed_files.py file_changes_log.csv
 
 ## Notes
 
